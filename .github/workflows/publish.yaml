@@ -6,8 +6,11 @@ on:
       - main
 
 jobs:
-  publish_nightly:
+  publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: checkout
         uses: actions/checkout@v3
