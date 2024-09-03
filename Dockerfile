@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/l4t-tensorflow:r32.4.2-tf1.15-py3
+FROM tensorflow/tensorflow:latest-gpu
 
 RUN pip3 install ai-benchmark
 
