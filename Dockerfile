@@ -1,13 +1,7 @@
-FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu20.04
+FROM nvcr.io/nvidia/l4t-tensorflow:r32.4.2-tf1.15-py3
 
-RUN apt-get update
-RUN apt-get install -y python3 
-RUN apt-get install -y python3-pip
-RUN apt-get install -y tensorrt 
-RUN apt-get install -y python3-libnvinfer-dev
-
-RUN pip3 install tensorflow[and-cuda]
 RUN pip3 install ai-benchmark
+
 RUN pip3 install --force-reinstall -v "numpy==1.23.4"
 
 RUN <<EOR
