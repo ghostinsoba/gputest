@@ -3,7 +3,7 @@ FROM tensorflow/tensorflow:devel-gpu
 RUN pip3 install tensorflow
 RUN pip3 install ai-benchmark
 
-RUN pip3 install --force-reinstall -v "numpy=1.23.4"
+RUN pip3 install --force-reinstall -v "numpy==1.23.4"
 
 RUN <<EOR
 cat << 'EOF' >> main.py
